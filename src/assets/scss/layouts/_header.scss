@@ -62,11 +62,24 @@
         width: 10rem;
         color: black;
       } 
-      .dropdown > a {
-        background-color: white;
-        color: $black;
-        border: none;
-        font-size: $font-size-xs;
+      .dropdown {
+        border: 1px solid $general-border;
+        &:focus {
+          outline :none;
+        }
+        &> a {
+          background-color: white;
+          color: $black;
+          border: none;
+          font-size: $font-size-xs;
+        }
+      }
+      .btn.btn-secondary.dropdown-toggle {
+        &:focus {
+          box-shadow: none;
+          
+  
+        }
       }
       .show > .btn-secondary.dropdown-toggle {
         color: black;
@@ -80,6 +93,10 @@
       }
       .input-group > .form-control {
         font-size: $font-size-xs;
+      }
+      .dropdown-menu {
+        font-size: $font-size-xs;
+        min-width: 7rem;
       }   
     }
     .navbar-social {
@@ -270,6 +287,7 @@
   }
   .navbar-expand-lg .navbar-collapse {
     flex-wrap: wrap;
+    color: black;
   }
   .navbar {
     &-menu {
