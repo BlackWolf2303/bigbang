@@ -1,0 +1,12 @@
+mixin single-card(title,imgLink,content,buttonText,author)
+  .card-wrapper.col-xs-6.col-sm-6.col-md-6.col-lg-4
+    .single-card-img
+      +link(title, '/book-details.html')
+        +img(title,imgLink)
+    .single-card-body
+      +link(author).author-name
+      p.single-card-text=content
+      a(href="/book-details.html", title=title).card-link
+        span.icon-external-link
+        span.external-text=buttonText
+      

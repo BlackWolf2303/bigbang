@@ -1,0 +1,7 @@
+mixin title-secondary(text, highlightText, direction)
+  .title-secondary-wrapper
+    h2.title-secondary.text-red&attributes(attributes)
+      span.title-secondary-highlight-text=highlightText
+      span.title-secondary-text=text
+      if block
+        block

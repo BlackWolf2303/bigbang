@@ -1,0 +1,192 @@
+mixin section-mission
+  .mission-content
+    p.text-red Our Mission
+    h1.text-red Science For People
+    p.mission-text We, at the Fondation IPSEN, wish for all to discover and share scientific knowledge as new advances.
+    +link('Discover Our Mission').abutton.button-primary.button-red
+  .mission-images
+    - var length = 6, n = 1;
+    while length >= n 
+      .mission-image.section-image-float.image-round
+        - var imageURL = "../assets/images/mission-image-" + n + ".png";
+        img(alt="", src=imageURL)
+      - n++
+  +link('Go Next').abutton.button-round.mission-next-button
+    span.icon-arrow-down
+
+mixin section-partners
+  +title-secondary('Our Science For People Partners', 'Our')
+    +img('', '../assets/images/section-parters-bg.png').section-image-background
+  .partner-items
+    - var length = 4, n = 1;
+    while length >= n
+      .partner-item
+        .inner
+          p.partner-item-text Promote science internationally with
+          - var imageURL = "../assets/images/our-programs/card-image-" + (n >= 4 ? 1 : n) + ".jpg";
+          .partner-image-wrapper
+            img(alt="", src=imageURL)   
+          h3.partner-title.text-red International
+      - n++
+  +link('View All Our Programs').abutton.button-primary
+
+mixin section-introduction
+  +title-secondary('Who We Are', 'Who')
+  .introduction-text.text-left 
+    p A non-for-profit foundation sheltered by "Fondation de France" since 1983 and headed by a complemetary leadership team. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie.
+    .actions.text-center
+      +link('Contact Us').abutton.button-primary
+  .introduction-images-wrapper.section-image-float.image-round
+    +img('Who We Are', '../assets/images/section-introduction-image.jpg')
+
+mixin section-fondation
+  +title-secondary(' What’s new at the Fondation?', 'What').text-white
+    .fondation-items
+      .fondation-item.d-flex
+        .fondation-date March 22,2019
+        .fondation-text Finding your way: Science of Success Next Webinar with Science / AAAS
+      .fondation-item.d-flex
+        .fondation-date March 22,2019
+        .fondation-text Finding your way: Science of Success Next Webinar with Science / AAAS
+      .fondation-item.d-flex
+        .fondation-date March 22,2019
+        .fondation-text Finding your way: Science of Success Next Webinar with Science / AAAS
+
+mixin section-book-lab
+  .inner
+    .book-lab-logo
+      +img('Book Lab', '../assets/images/book-lab-logo.png').img-fluid
+    p.book-lab-text Thanks the respective talents of our collaborators (scientists, research institutions, artists, writers, publishers), our library is growing with books to discover and value Science.
+    .book-lab-items.ipsen-row      
+      +section-book-lab-item('Kid Books', '../assets/images/booklab-section-img-1.jpg', 'SciBooks for Children', 'Kids', 'March 22, 2018', 'A series of illustrated science books that describe biological and medical science for children aged 3-10.')
+      +section-book-lab-item('Mangas', '../assets/images/booklab-section-img-2.jpg', 'X=Y=Equity in Science', 'Manga', 'March 22, 2018', 'Stories about women working in different scientific disciplines and the challenges they faced.')
+      +section-book-lab-item('Life Manuals', '../assets/images/booklab-section-img-3.jpg', 'Wounded Warriors: Movement skills manual', 'Health', 'March 22, 2018', 'The Warrior Movement Screen is a book to promote exercise in veterans. ')
+    .book-lab-background-images
+      .book-lab-background-image.section-image-float.image-round
+        +img('Image 1', '../assets/images/booklap-background-image-1.jpg')
+      .book-lab-background-image.section-image-float.image-round
+        +img('Image 2', '../assets/images/booklap-background-image-2.png')
+      .book-lab-background-image.section-image-float.image-round
+        +img('Image 3', '../assets/images/booklap-background-image-3.png')
+  .actions.text-center
+    +link('Enter in the booklab').abutton.button-primary.button-orange
+
+mixin section-book-lab-item(category, imageSrc, title, tag, date, text)
+  .book-lab-item
+    .card
+      .card-header
+        +link(category).book-lab-item-category.text-orange
+        +link(category)
+          +img('Kid Books', imageSrc).card-img
+      .card-body
+        +link(title).card-title
+        .card-infomation
+          .tag.text-orange=tag
+          .date=date
+        p.card-text=text 
+
+mixin section-live-from-lab
+  .outer
+    .inner
+      .live-from-lab-logo
+        +img('Live Logo', '../assets/images/live-logo.png').img-fluid      
+        +img('', '../assets/images/section-parters-bg.png').section-image-background
+      .live-from-lab-content
+        .live-from-lab-title.text-violet A weekly scientific  <br> bulletin in live<br> from  labs for  <br>everyone !
+        .live-from-lab-text
+          ul
+            li - News
+            li - Interviews
+            li - Preserve the planet
+            li - Family Corner
+      .actions.text-center
+        +link('Enter in the journal').abutton.button-primary.button-violet
+        +link('Subcrise to the journal').abutton.button-primary.button-light-green
+  .live-from-lab-background-images
+    .live-from-lab-background-image.section-image-float.image-round
+      +img('Image 1', '../assets/images/live-from-lab-image-1.jpg')
+    .live-from-lab-background-image.section-image-float.image-round
+      +img('Image 2', '../assets/images/live-from-lab-image-2.jpg')
+  
+
+mixin contact-form
+  .contact-form-wrapper
+    form.form.contact-form.needs-validation(action="#", novalidate)
+      .contact-form-title Contact Us
+      p.contact-form-text Please, feel free to contact us for any question or suggestion. Also, do not hesitate to share with us your thoughts to better connect science to people or if you already have a project which needs support for accomplishing this mission. 
+      +form-group('First name','required')(type="text", id="first-name", required="required")
+      +form-group('Last name','required')(type="text", id="last-name", required="required")
+      +form-group('Email address','required')(type="email", id="email-address", required="required")
+      +form-group('Message','required', 'textarea')(id="message", required="required", rows=5)
+      .form-group
+        .google-captcha-block
+          +img('', '../assets/images/captcha.jpg').img-fluid
+      .actions
+        button(type="submit").button-primary
+          span Submit
+  
+mixin contact-information
+  .contact-information
+      .contact-map
+        .inner
+          iframe#gmap_canvas(width='100%', height='100%', src='https://maps.google.com/maps?q=65%20Quai%20Geores&t=&z=17&ie=UTF8&iwloc=&output=embed', frameborder='0', scrolling='no', marginheight='0', marginwidth='0')
+      .contact-information-detail
+        p
+          span.icon-location.text-red
+          span 65 quai George Gorse - <br>92650, Boulogne Billancourt
+        p
+          span.icon-phone.text-red
+          +link('+33 1 58 33 50 00', 'tel:+33158335000')
+
+mixin livefromlab-top
+  section.live-from-lab-top
+    .row
+      .col-lg-6.offset-lg-1 
+        .live-from-lab-top-text    
+          p A weekly scientific bulletin for everyone who wants to discover latest groundbreaking advances and met the scientists that are amazingly transforming society with science. No specific degree is required… Just curiosity!
+          +link('SUBSCRIBE TO THE BULLETIN').abutton.button-primary.button-light-green
+      .col-lg-5
+        .live-from-lab-top-image
+          +img('Live From Lab', '../assets/images/live-logo.png').img-fluid
+
+mixin livefromlab-articles
+  section.live-from-lab-articles-2.live-from-lab-articles
+    .row
+      +livefromlab-article('/the-journals.html', 'From the journals', 'Fro', '../assets/images/live-from-lab-article-image.jpg', 'A Brain-Computer interface allowing people with paralysis to use computers', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa.').red-first
+      +livefromlab-article('/meet-scientist.html', 'Meet a Scientist', 'Mee', '../assets/images/live-from-lab-article-image-2.jpg', 'Pr. Eran Elinav: An expert who linked obesity to gut microbiome', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa.').half-width.orange
+      +livefromlab-article('/the-planet.html', 'Preserve the planet', 'Pre', '../assets/images/live-from-lab-article-image-3.jpg', 'Ecosia, a search engine that plants trees', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa.').half-width.light-green
+      +livefromlab-article('/family-corner.html', 'Family Corner', '', '../assets/images/kids-dance.png', 'How a scientist plays with genes?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa.', 'Discover Science with your kids').specialty.orange
+      +livefromlab-article('/family-corner.html', '', '', '../assets/images/live-from-lab-article-image-4.jpg', 'How to find and understand a scientific information?', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa.').half-width.no-title
+      +livefromlab-article('/family-corner.html', '', '', '../assets/images/live-from-lab-article-image-5.jpg', 'Submit your Live from Lab video, download the guide', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa.').half-width.no-title
+
+mixin livefromlab-article(url, title, titleHighlight, imageUrl, subtitle, text, cardImageText)
+  article.live-from-lab-article&attributes(attributes)
+    .inner
+      +title-secondary(title, titleHighlight).horizontal-line.live-from-lab-article-title
+      +link('View All').link-arrow
+      .card-wrapper
+        .single-card-img
+          if cardImageText
+            h3.text-white=cardImageText
+          +link(title, url)
+            +img(title, imageUrl).img-fluid
+        .single-card-body
+          h3
+            +link(subtitle, url)
+          p.single-card-text=text
+          +link('Read Article', url).link-arrow
+
+mixin livefromlab-article-special
+  article.live-from-lab-article.specialty
+    .inner
+      h2.text-orange.offset-lg-2.live-from-lab-article Family Corner
+      .row
+        .col-lg-4.offset-lg-2.d-flex.col-md-6
+          .bg-orange.flex-grow-1.inner
+            h3.text-white Discover Science with your kids
+            +img('From the journals', '../assets/images/kids-dance.png').live-from-lab-article-image-above
+        .col-md-6
+          .live-from-lab-article-content
+            h3.live-from-lab-article-subtitle How a scientist plays with genes?
+            p.live-from-lab-article-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa.
+            +link('View All').link-arrow.text-orange

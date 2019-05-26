@@ -1,0 +1,25 @@
+extends _templates/home_template.pug
+block vars
+ -bodyClass = 'home-page'
+ -title = 'Home Page'
+block page_content
+  .main-content
+    aside
+      +link('Ipsen', '/').top-logo
+        +img('logoFI', '/assets/images/LogoFI.svg').img-fluid
+    .page-scroll
+      .sections
+        .section.section-mission
+          +section-mission()
+        .section.section-partners.text-center
+          +section-partners()
+        .section.section-introduction.text-center
+          +section-introduction()
+        .section.section-fondation.text-center(data-dark-background)
+          +section-fondation()
+        .section.section-book-lab(data-color="#F65D06")
+          +section-book-lab()
+        .section.section-live-from-lab(data-color="#5661C4")
+          +section-live-from-lab()
+        .section.section-footer.fp-auto-height(data-color="#5661C4")
+          include ./_partials/footer

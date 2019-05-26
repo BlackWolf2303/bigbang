@@ -1,0 +1,19 @@
+//- layout.pug
+include ../_mixin/all
+block vars
+  -bodyClass = ''
+html
+  head
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title Ipsen - #{title}
+    // https://googlefonts.3perf.com/ tto opttimized google font
+    block head_styles
+      link(rel='stylesheet', href='/assets/css/main.css')
+    block head_scripts
+  body(class=bodyClass)
+    include ../_partials/header.pug
+    block content
+    include ../_partials/footer.pug
+    block foot_scripts
+      script(src='/assets/js/vendor.js')
+      script(src='/assets/js/main.js')

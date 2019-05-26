@@ -1,0 +1,12 @@
+mixin form-group(labelText, labelClass, formControlType, formGroupAttribute)
+  .form-group&attributes(formGroupAttribute)
+    label(for=attributes.id, class=labelClass)=labelText
+    case formControlType
+      when 'textarea'
+        textarea.form-control&attributes(attributes)
+        -break
+      when 'select'
+        select.form-control&attributes(attributes)  
+        -break
+      default
+        input.form-control&attributes(attributes)

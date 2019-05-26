@@ -1,0 +1,8 @@
+{
+  "scripts": [
+    "./src/assets/vendors/jquery/jquery-3.4.0.min.js",
+    "./src/assets/vendors/bootstrap/bootstrap.min.js",
+    "./src/assets/vendors/slick/slick.min.js",
+    "./src/assets/vendors/fullpagejs/jquery.fullPage.js"
+  ]
+}

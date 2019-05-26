@@ -1,0 +1,127 @@
+.book-lab {
+  .single-card-img {
+    border-radius: 0;
+    max-width: auto;
+  }
+  overflow: auto;
+  height: auto;
+  overflow-x: hidden;
+
+  .overlay-background {
+    position: absolute;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 33%, rgba(255,0,0,0) 100%), url("../../../assets/images/children-background.jpg") no-repeat;
+    @media #{$tablet} { 
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,0,0,0) 115%, rgba(255,0,0,0) 100%), url("../../../assets/images/children-background.jpg") no-repeat;
+    }
+    @media #{$mobile-small} { 
+      background: linear-gradient(0deg, rgba(255,255,255,1) 67%, rgba(255,0,0,0) 89%, rgba(255,0,0,0) 108%), url("../../../assets/images/children-background.jpg") no-repeat;
+      background-size: contain;
+    }
+    background-size: 100% auto;
+    background-position: top;
+    width: 100vw;
+    height: 100%;
+    opacity: 0.15;
+    margin-top: 6rem;
+  }
+  .bottom-img-background {
+    background: url('../../../assets/images/section-parters-bg.png') no-repeat;
+    height: 76.3rem;
+    width: 76.3rem;
+    background-size: contain;
+    position: absolute;
+    right: -46.5rem;
+    top: -12rem;
+    opacity: 0.02;
+  }
+  .related-background {
+    position: relative;
+  }
+
+  .title-secondary-highlight-text:before {
+    background-color: $orange;
+  }
+  .text-red {
+    color: $orange;
+  }
+  header {
+    width: 100vw;
+    z-index: 99;
+    #menu {
+      background-color: $orange;
+      color: white;
+      max-height: 6rem;
+      .nav-link {
+        color: white;
+      }
+    }
+  }
+  footer {
+    display: block;
+    margin-top: 6rem;
+    background-color: $orange;
+    .footer-top, .footer-bottom {
+      margin-left: 0;
+      width: 100%;
+    }
+    @media #{$mobile-small} {
+      margin-top: 4rem;
+    }
+  }
+  .page-title {
+    color: $orange;
+  }
+  .card-section {
+    @media #{$tablet} {
+      margin-top: 4rem;
+    }
+    @media #{$mobile-small} {
+      margin-top: 2rem;
+    }
+
+
+      @media #{$mobile-small} {
+        margin-bottom: 6rem;
+      }
+      .single-card-img {
+        box-shadow: 0 0 20px #ccc5;
+        margin-bottom: 2rem;
+      }
+  }
+
+  .title-secondary {
+
+    // margin-left: 6.7rem;
+  }
+  .link-arrow {
+    position: absolute;
+    top: 6rem;
+    left: 8rem;
+    color: $orange;
+  }
+  .card-wrapper {
+    justify-content: left;
+  }
+
+  @media #{$mobile-small} {
+    .page-title + .nav-breadcrumb {
+      margin-top: 0;
+    }
+    .title-secondary-wrapper .title-secondary {
+      margin-bottom: 3rem;
+      .link-arrow {
+        top: 3rem;
+        left: 0;
+      }
+    }
+  }
+}
+@media #{$tablet} {
+  .book-lab .card-section .row  {
+    margin-bottom: 0;
+  }   
+  .book-lab .title-secondary {
+    margin-bottom: 0;
+
+  }
+}

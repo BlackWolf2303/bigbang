@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="16px" viewBox="0 0 11 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>location</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UX-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ipsen-DT-UI-0400-ContactUs" transform="translate(-735.000000, -889.000000)" fill="#CB1515">
+            <g id="article" transform="translate(150.000000, 310.000000)">
+                <g id="Group-2" transform="translate(582.000000, 576.000000)">
+                    <path d="M8.316,10.041564 C7.26520796,10.0021521 6.44138284,9.12522816 6.46759706,8.07402407 C6.49381128,7.02281999 7.3603215,6.18804847 8.41177188,6.20106088 C9.46322225,6.21407328 10.3088085,7.07003314 10.309,8.12156401 C10.288207,9.20183217 9.39629201,10.0610779 8.316,10.041564 Z M8.316,3.00156401 C5.52362754,2.93367628 3.1764355,5.08394438 3,7.87156401 C3,10.551564 5.3,13.761564 8.316,18.361564 C11.327,13.761564 13.631,10.551564 13.631,7.87156401 C13.4545765,5.08434074 11.1079892,2.93422217 8.316,3.00156401 L8.316,3.00156401 Z" id="location"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

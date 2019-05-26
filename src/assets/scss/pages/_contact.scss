@@ -1,0 +1,91 @@
+.contact {
+  &-page {
+    background: url('#{$background-base-url}/contact-page-bg.jpg') no-repeat top center;
+    background-size: 100%;
+    font-size: $font-size-s;
+    .page-title {
+      margin-top: 10rem;
+      + .nav-breadcrumb {
+        margin-bottom: 6.7rem;
+      }
+      + .row {
+        padding-top: 6.7rem;
+      }
+      @media #{$tablet} {
+        font-size: 6rem;
+        + .nav-breadcrumb {
+          margin-bottom: 3.5rem;
+        }
+      }
+      @media #{$mobile-small} { 
+        font-size: 4rem;
+        line-height: 5rem;
+      } 
+
+    }
+    .breadcrumb-item.active, .breadcrumb-item:before {
+      color:$red;
+    }
+  }
+  &-form {
+    &-wrapper {
+      background: $white;
+      padding: 2.3rem 2rem 2rem;
+      box-shadow: 0 0 6px rgba(0,0,0,.06);
+    }
+    &-title {
+      font-family: $font-family-base-semi-bold;
+      font-size: $font-size-base;
+      color: $dark-blue;
+      margin-bottom: $contact-form-base-margin;
+    }
+    &-text {
+      margin-bottom: $contact-form-base-margin;
+    }
+  }
+  &-map {
+    margin-bottom: 2.3rem;
+    position: relative;
+    top: 0;
+    padding-top: 100%;
+    > .inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-information-detail {
+    > p {
+      position: relative;
+      padding-left: 2rem;
+    }
+    [class^="icon"] {
+      position: absolute;
+      top: 5px;
+      left: 0;
+    }
+    > p + p {
+      margin-top: 3rem;
+    }
+    a {
+      color: $black;
+    }
+  }
+}
+@media #{$tablet} {
+  .contact-map {
+    margin-top: 5rem;
+  }
+}
+@media #{$mobile-small} {
+  .contact-information-detail > p + p {
+    margin-top: 0
+  }
+  .contact-page {
+    footer {
+      margin-top: 4rem;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+mixin card-book-detail(imgLink,content,buttonText,author)
+  .card-detail-wrapper
+    .img-wrapper
+      +img(title,imgLink)
+    .card-detail-content
+      .text-content
+        span.author-name=author
+        p=content
+      .order-button
+        a(href="#", title=title)=buttonText
+      

@@ -1,0 +1,113 @@
+// Colors
+$red: #CB1515;
+$black:#000;
+$violet: #5661C4;
+$light-blue: #29B8CE;
+$dark-blue: #070A46;
+$light-orange: #FF6819;
+$orange: #FF6819;
+$pink: #E94578;
+$green: #A9CB60;
+$light-green: #65D4B6;
+$gray: #B5B5B5;
+$light-gray: #F5F5F5;
+$image-shadow: #ccc5;
+
+//Font-size
+$font-size-base: 2rem;
+$font-size-xxl: $font-size-base*4; // 8rem
+$font-size-xl: $font-size-base*3; // 6rem
+$font-size-lg: $font-size-base*2; // 4rem
+$font-size-m: $font-size-base*.8; // 1.6rem
+$font-size-s: $font-size-base*.7; // 1.4rem
+$font-size-xs: $font-size-base*.65; // 1.3rem
+
+//Font Family
+$font-family-backup: Helvetica, Arial, san-serif;
+$font-family-base: ProximaNova Regular, $font-family-backup;
+$font-family-secondary: AbrilFatface Regular, $font-family-backup;
+$font-family-base-bold: ProximaNova Bold, $font-family-backup;
+$font-family-base-extra-bold: ProximaNova Extra Bold, $font-family-backup;
+$font-family-base-semi-bold: ProximaNova Semi Bold, $font-family-backup;
+
+//transition
+$transition-time: .2s;
+$transition-timing-function: ease-in-out;
+
+//Background
+$background-base-url: '../images';
+
+//Button
+$button-primary-height: 3.2rem;
+
+//Size
+$aside-width: 20rem;
+$aside-width-tablet: 5rem;
+$navbar-menu-width: 54.4rem;
+$booklab-section-margin-default: 3.2rem;
+$booklab-section-margin-small-desktop: 1.6rem;
+$booklab-section-spacing-grid: 1.2rem;
+$contact-form-base-margin: 2.1rem;
+
+// Screen-size
+$xs-up: 560px;
+$sm-up: 768px;
+$md-up: 992px;
+$lg-up: 1200px;
+$xl-up: 1440px;
+
+$xs-down: 559.98px;
+$sm-down: 767.98px;
+$md-down: 991.98px;
+$lg-down: 1199.98px;
+$xl-down: 1439.98px;
+
+//grid
+$grid-item-spacing: 1.2rem;
+
+// Breakpoint
+// USAGE EXAMPLES:
+//          @media #{$all} {}
+//          @media #{$screen} {}
+//          @media #{$print} {}
+//          @media #{$mobile} {}
+//          @media #{$tablet} {}
+//          @media #{$moblet} {}
+//          @media #{$desktop} {}
+
+$all: "all";
+$screen: "screen";
+$print: "print";
+$mobile-small: "screen and (max-width: #{$xs-down})";
+$mobile: "screen and (max-width: #{$sm-down})";
+$tablet: "screen and (max-width: #{$md-down})";
+$desktop: "screen and (max-width: #{$lg-down})";
+$desktop-lg: "screen and (max-width: #{$xl-down})";
+$desktop-xl: "screen and (min-width: #{$xl-up})";
+
+//Title Secondary
+$title-secondary-text-indent: 1rem;
+$title-secondary-circle-size: 14.6rem;
+$title-secondary-line-width: .4rem;
+$title-secondary-line-transfom-x: $title-secondary-circle-size/2 - $title-secondary-line-width/2;
+$title-secondary-line-height: 7rem;
+
+$title-secondary-circle-size-tablet: 12rem;
+$title-secondary-line-transfom-x-tablet: $title-secondary-circle-size-tablet/2 - $title-secondary-line-width/2;
+$title-secondary-line-height-tablet: 5rem;
+
+
+$title-secondary-circle-size-mobile: 8rem;
+$title-secondary-line-transfom-x-mobile: $title-secondary-circle-size-mobile/2 - $title-secondary-line-width/2;
+$title-secondary-line-height-mobile: 3.5rem;
+//Page Title
+$page-title-font-size-tablet: 6rem;
+$page-title-font-size-mobile: 4rem;
+$page-title-line-height-tablet: 7rem;
+$page-title-line-height-mobile: 5rem;
+//breadcrumb
+$breadcrumb-item-padding: 1rem;
+$home-section-width: 1240;
+$home-section-height: 800;
+
+$livefromlab-article-spacing: 6rem;

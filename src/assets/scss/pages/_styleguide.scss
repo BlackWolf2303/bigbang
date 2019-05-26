@@ -1,0 +1,51 @@
+.styleguide {
+  footer,
+  header {
+    display: none;
+  }
+  .card-body {
+    > * {
+      margin-bottom: 2.5rem;
+    }
+  }
+  .color {
+    &-preview {
+      width: 5rem;
+      height: 5rem;
+      margin-bottom: 1rem;
+      &.red {
+        background: $red;
+      }
+      &.black {
+        background: $black;
+      }
+      &.light-blue {
+        background: $light-blue;
+      }
+      &.dark-blue {
+        background: $dark-blue;
+      }
+      &.light-orange {
+        background: $light-orange;
+      }
+      &.orange {
+        background: $orange;
+      }
+      &.pink {
+        background: $pink;
+      }
+      &.green {
+        background: $green;
+      }
+      &.light-green {
+        background: $light-green;
+      }
+      &.gray {
+        background: $gray;
+      }
+      &.light-gray {
+        background: $light-gray;
+      }
+    }
+  }
+}

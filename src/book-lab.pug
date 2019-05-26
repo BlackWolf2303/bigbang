@@ -1,0 +1,40 @@
+extends _templates/about_template.pug
+block vars
+ -bodyClass = 'book-lab'
+ -title = 'Book Lab'
+block page_content
+  .page-title
+    .text-title
+      h1 Book Lab
+  +breadcrumb(['Home', 'Book Lab'])
+  .card-section
+    +title-secondary('Children books','Chi').horizontal-line
+      +link('View all','/children-books.html').link-arrow
+    .card-wrappers
+      .row
+        - var ImgList = [{name:'Cadherin is looking for a friend',url:'children-book-1',content:'Cadherin is a small protein waking up one day and feeling terribly alone near her house named “Golgi”. She refused much longer her loneliness and start a journey across this universe called “Cell”, looking for a friend.', author:'By Olga Markova'},{ name:'Mister Cancer wants to occupy every space',url:'children-book-2',content:'Everything was fine in the human body until the day when a cell  multiplied itself to occupy every space and became Mister Cancer. How the immune system and Doctor “Chemo Magician” will arrest Mister Cancer?',author:'By Inna Kuperstein'},{ name:'Kimy gives the alert',url:'children-book-3',content:'Kimy is a chemokine living in Alyssa’s body to help her to stay healthy. But, one day…It’s the red altert! Some bacteria are trying to invade Alyssa’s skin!',author:'By Marine Stefanutti'}];
+        each item in ImgList
+          - var imageURL = "../assets/images/book-lab/" + item.url + ".jpg";
+            +single-card(item.name,imageURL,item.content,'Learn more',item.author)
+
+  .card-section
+    +title-secondary('Manga / Comic books','Man').horizontal-line
+      +link('View all','/manga-books.html').link-arrow
+    .card-wrappers  
+      .row
+        - var ImgList = [{name:'One of a kind',url:'manga-comic-1',content:'Ramona hopes to be acknowledged as  an engineer. She accepted a mission on an offshore oil rig. Stereotypes, prejudices and insensitive comments come thick and fast… but they haven’t heard the last of her yet.', author:'By Reptilian'},{ name:'Gender chaos',url:'manga-comic-2',content:'Nohr works as a young doctor in the emergency room. In this competitive environment, her fighting spirit and motivation have been put to the test. During a stormy evening, Maxence’s mind, her colleague and rival, has been transfered into her brain. How these two souls will work together to save patient lives?',author:'By Kathleen Bausset'},{ name:'Glass ceiling',url:'manga-comic-3',content:'Meredith had failed her interview to head a research team. She started to doubt whether she could do it… How she could break this glass ceiling?',author:'By Emilie Tosello'}];
+        each item in ImgList
+          - var imageURL = "../assets/images/book-lab/" + item.url + ".jpg";
+            +single-card(item.name,imageURL,item.content,'Learn more',item.author)
+
+  .card-section.related-background
+    .bottom-img-background
+    +title-secondary('Life Manuals','Lif').horizontal-line
+      +link('View all','/life-books.html').link-arrow
+    .card-wrappers      
+      .row
+        - var ImgList = [{name:'Warrior Movement Screen',url:'life-manual-1',content:'The Warrior Movement Screen is a book that explains different types of movements and physical maneuvers for veterans. This project was carried out in collaboration with Wounded Warriors in the United States of America (501c3) for the dissemination of this booklet.', author:'By John Smith'},{ name:'Finding your way: The science of success',url:'life-manual-2',content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',author:'By John Smith'},{ name:'Scientific Papers',url:'life-manual-3',content:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.',author:'By John Smith'}];
+        each item in ImgList
+          - var imageURL = "../assets/images/book-lab/" + item.url + ".jpg";
+            +single-card(item.name,imageURL,item.content,'Learn more',item.author)
+

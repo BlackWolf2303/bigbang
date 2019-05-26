@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="7px" height="13px" viewBox="0 0 7 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>fa-facebook</title>
+    <desc>Created with Sketch.</desc>
+    <g id="UX-UI" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Ipsen-DT-UI-0300-LiveFromLab" transform="translate(-1134.000000, -23.000000)" fill="#FFFFFF">
+            <g id="TOP">
+                <g id="HEADER">
+                    <g id="fa-facebook/white" transform="translate(1134.000000, 23.000000)">
+                        <path d="M7,0.09375 L7,2.15625 L5.72800926,2.15625 C5.26350579,2.15625 4.95023148,2.25 4.78819444,2.4375 C4.62615741,2.625 4.54513889,2.90625 4.54513889,3.28125 L4.54513889,4.7578125 L6.91898148,4.7578125 L6.60300926,7.0703125 L4.54513889,7.0703125 L4.54513889,13 L2.06597222,13 L2.06597222,7.0703125 L0,7.0703125 L0,4.7578125 L2.06597222,4.7578125 L2.06597222,3.0546875 C2.06597222,2.0859375 2.34683912,1.33463281 2.90856481,0.80078125 C3.47029051,0.266929687 4.2183669,0 5.15277778,0 C5.94675926,0 6.5625,0.03125 7,0.09375" id="fa-facebook"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

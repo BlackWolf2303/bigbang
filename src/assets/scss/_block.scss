@@ -1,0 +1,162 @@
+
+  //Global css block & mixin
+  // single card 
+.nav-breadcrumb + .card-section {
+  padding-top: 6rem;
+}
+.card-section {
+  .card-wrappers {
+    padding-top: 3rem;
+  }
+}
+.card-wrapper {
+
+  @extend .card;
+  background: none;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+  margin-bottom: 6.3rem;
+  h3 {
+    > a {
+      color: inherit;
+      &:hover {
+        color: $light-blue;
+        text-decoration: none;
+      }
+    }
+  }
+  > .single-card-img {
+    margin: 0 auto 2.5rem;
+
+  }
+  > h3 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-family: $font-family-secondary;
+   
+  }
+  .author-name {
+    color: #B5B5B5;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  .card-link {
+    font-size: 1.6rem;
+    color: $red;
+    font-family: $font-family-base-extra-bold;
+    .icon-external-link {
+     font-size: 1.4rem;
+     margin-right: .4rem;
+    }
+    // &::before {
+    //   content:'';
+    //   display: block;
+    //   background: url('../images/external-link.svg') no-repeat;
+    //   background-position: center center;
+    //   margin: .2rem .5rem 0 0;
+    //   width: 20px;
+    //   height: 20px;
+    //   display: inline-block;
+    //   vertical-align: middle;
+    //   position: relative;
+    //   top: -1px;
+    // }
+  }
+  .single-card-text {
+    line-height: 1.625;
+  }
+}
+
+  // single card book detail
+.card-detail-wrapper {
+  display: flex;
+  max-width: 75rem;
+  max-height: 28rem;
+
+  .card-detail-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .single-card-img { 
+    margin-right: 2.4rem;
+  }
+  .author-name {
+    color: #B5B5B5;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  a {
+    display: inline-block;
+    background-color: $orange;
+    color: white;
+    width: 8.7rem;
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+
+@media #{$tablet} {
+  .nav-breadcrumb + .card-section {
+    padding-top: 2.5rem;
+  }
+  .card-section {
+    .card-wrappers {
+      padding-top: 0;
+    }
+  }
+  //page title & breadcrumb
+  .page-title {
+    .text-title {
+      h1 {
+        font-size: $page-title-font-size-tablet;
+        line-height: $page-title-line-height-tablet;
+        
+      }
+      .breadcrumb .breadcrumb-item{
+        font-size: 1rem;
+      }
+    }
+  }
+  //card single
+  .card-wrapper {
+    margin-bottom: 3.5rem;
+
+  }
+  .card-detail-wrapper {
+    flex-direction: column;
+    width: 90vw;
+    height: 100%;
+    .img-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+@media #{$mobile-small} {
+  .card-wrapper { 
+    > .single-card-img {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .page-title {
+    .text-title {
+      h1 {
+        font-size: $page-title-font-size-mobile;
+        line-height: $page-title-line-height-mobile;
+      }
+    }
+  }
+}

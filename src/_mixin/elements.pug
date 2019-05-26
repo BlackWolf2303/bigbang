@@ -1,0 +1,10 @@
+mixin breadcrumb(data)
+  - var items = data || ['Home', 'Page']
+  nav(aria-label='breadcrumb').nav-breadcrumb
+    ol.breadcrumb
+      each item, index in items
+        if index < items.length - 1
+          li.breadcrumb-item
+            +link(item)
+        else
+          li.breadcrumb-item.active(aria-current="page")=item

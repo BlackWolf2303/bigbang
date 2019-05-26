@@ -1,0 +1,39 @@
+header.header
+  #menu
+    nav.navbar.navbar-expand-lg
+      button.navbar-toggler(type='button', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span
+        span
+        span
+      #navbarSupportedContent.navbar-collapse      
+        +link('Ipsen', '/').navbar-brand
+          +img('Home', '/assets/images/LogoFI.svg').img-fluid
+        ul.navbar-menu.navbar-nav
+          - var arr = [{text: 'Our Programs', href: '/our-programs.html'}, {text: 'Book Lab', href: '/book-lab.html'}, {text: 'Live From Lab', href: '/live-from-lab.html'}, {text: 'Contact Us', href: '/contact.html'}]
+          each item in arr 
+            li.nav-item
+              +link(item.text, item.href).nav-link
+        form.menu-search
+          .input-group
+            input.form-control(type='text', placeholder='Search', aria-label='Search', id="header-search", name="search")
+            label(for="header-search")
+              span.icon-search
+        ul.navbar-social.navbar-nav
+          li.nav-item
+            +link('Facebook').nav-link
+              span.icon-fa-facebook
+          li.nav-item
+            +link('LinkedIn').nav-link
+              span.icon-fa-linkedin
+          li.nav-item
+            +link('Twitter').nav-link
+              span.icon-fa-twitter
+          li.nav-item
+            +link('YouTube').nav-link
+              span.icon-fa-youtube
+        ul.navbar-nav.navbar-language
+          li.nav-item.active
+            +link('English').english-language.nav-link
+          li.nav-item
+            +link('Français').french-language.nav-link
+
