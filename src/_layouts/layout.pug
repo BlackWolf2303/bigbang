@@ -12,10 +12,11 @@ html
       link(rel='stylesheet', href='/assets/css/main.css')
     block head_scripts
   body(class=bodyClass)
-    include ../_partials/header.pug
-    .main-content
-      block content
-    include ../_partials/footer.pug
-    block foot_scripts
-      script(src='/assets/js/vendor.js')
-      script(src='/assets/js/main.js')
+    .container
+      include ../_partials/header.pug
+      .main-content
+        block content
+      include ../_partials/footer.pug
+      block foot_scripts
+        script(src='/assets/js/vendor.js')
+        script(src='/assets/js/main.js')

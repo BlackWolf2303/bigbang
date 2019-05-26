@@ -1,11 +1,104 @@
-header {
-  position: fixed;
+.header {
   font-size: $font-size-m;
   z-index: 100;
   right: 0;
-  background: $red;
-  color: $white;
+  color: $black;
   left: 0;
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    &-left {
+
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      .menu-search {
+        margin-bottom: 0;
+        margin: 0 2rem 0 auto;
+        min-width: 20rem;
+        color: inherit;
+        .input-group {
+          padding: 1rem;
+        }
+        label {
+          display: flex;
+          align-items: center;
+          margin: 0 0 0 auto;
+          cursor: pointer;
+        }
+        .form-control {
+          border-color: currentColor;
+          margin-right: 1rem;
+          background: transparent;
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          width: 0;
+          padding: 0;
+          right: 1.6rem;
+          color: inherit;
+          opacity: 0;
+          transition: all $transition-time $transition-timing-function;
+          &:focus {
+            box-shadow: none;
+            border-color: currentColor;
+          }
+          &.active {
+            width: calc(100% - 26px);
+            padding: 0.375rem 0.75rem;
+            opacity: 1;
+          }
+          @include placeholder {
+            opacity: 1;
+            color: inherit;
+          }
+        }
+      }
+      .navbar-nav {
+        flex-direction: row;
+      }
+      .navbar-language {
+        width: 10rem;
+        color: black;
+      } 
+      .dropdown > a {
+        background-color: white;
+        color: $black;
+        border: none;
+        font-size: $font-size-xs;
+      }
+      .show > .btn-secondary.dropdown-toggle {
+        color: black;
+        background-color: white;
+        border:none;
+        font-size: $font-size-xs;
+      }
+      .input-group-append > .search-button {
+        padding: .5rem;
+        cursor: pointer;
+      }
+      .input-group > .form-control {
+        font-size: $font-size-xs;
+      }   
+    }
+    .navbar-social {
+      display: flex;
+      flex-direction: row;
+    }
+    
+  }
+  &-bottom {
+    display: flex;
+    justify-content: center;
+  }
+  &-footer {
+    #navbarSupportedContent {
+      justify-content: center;
+      font-size: $font-size-xs;
+    }
+  }
+
   label {
     color: currentColor;
   }
@@ -159,45 +252,7 @@ header {
     }
   }
 }
-.menu-search {
-  margin-bottom: 0;
-  margin: 0 5rem 0 auto;
-  min-width: 20rem;
-  color: inherit;
-  label {
-    display: flex;
-    align-items: center;
-    margin: 0 0 0 auto;
-    cursor: pointer;
-  }
-  .form-control {
-    border-color: currentColor;
-    margin-right: 1rem;
-    background: transparent;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 0;
-    padding: 0;
-    right: 1.6rem;
-    color: inherit;
-    opacity: 0;
-    transition: all $transition-time $transition-timing-function;
-    &:focus {
-      box-shadow: none;
-      border-color: currentColor;
-    }
-    &.active {
-      width: calc(100% - 26px);
-      padding: 0.375rem 0.75rem;
-      opacity: 1;
-    }
-    @include placeholder {
-      opacity: 1;
-      color: inherit;
-    }
-  }
-}    
+
 @media #{$desktop-lg} {
   .navbar {
     &-menu {

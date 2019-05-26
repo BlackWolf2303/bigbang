@@ -22,6 +22,8 @@ $font-size-m: $font-size-base*.8; // 1.6rem
 $font-size-s: $font-size-base*.7; // 1.4rem
 $font-size-xs: $font-size-base*.65; // 1.3rem
 
+//Line Height
+$line-height-base: 1.15;
 //Font Family
 $font-family-backup: Helvetica, Arial, san-serif;
 $font-family-base: ProximaNova Regular, $font-family-backup;
